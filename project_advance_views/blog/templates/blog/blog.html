@@ -1,0 +1,47 @@
+{% extends 'author/template.html' %}
+{% load static %}
+
+{% block isi %}
+<section>
+    <div class="container-fluid">
+        {% for data in blogs%}
+        <div class="row"> <!-- foto -->
+            <div class="col-3"></div>
+            <div class="col-6">
+                <img class="blogimg" src="{{data.images}}" alt="">
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">  <!-- tanggal -->
+            <div class="col-3"></div>
+            <div class="col-3">
+                <small><p>{{data.tanggal_post}}</p></small>
+            </div>
+            <div class="col-3 ml-auto">
+                <small><p class="text-right">{{data.jumlah_komen}} Comment</p></small>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row"> <!-- judul dan isi ke bawah -->
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p class = "judul">{{data.judul}}</p>
+                <p class = "isi">
+                    {{data.konten|truncatewords:55 }}
+                </p>
+                <p class="selanjutnya"><a href="{% url 'post_detail' post_id=data.id %}">Baca Selengkapnya</a></p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        {% endfor%}
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 text-center">
+                <a href="{% url 'post_new' %}">Add new post here</a>
+            </div>
+            <div class="col-3"></div>
+        </div>
+</section>
+
+{% endblock %}

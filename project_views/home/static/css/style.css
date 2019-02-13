@@ -1,0 +1,120 @@
+/* bagian awal */
+body{
+    margin: 0%;
+}
+
+footer{
+    margin: 0%;
+}
+
+.description{
+    padding: 20px 215px 20px 215px;
+    background-color:#21C1D3;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titledescription{
+    font-size: 36px;
+}
+/* bagian tengah home*/
+section{
+    margin: 20px 0px 20px 0px;
+}
+.mainimg{
+    margin: 10px 0px;
+    padding-left: 100px;
+}
+
+.col-7{
+    padding-right: 150px;
+}
+
+.maintitle{
+    font-size: 28px;
+}
+
+.youlearn{
+    font-size: 20px;
+    padding: 30px 0px;
+}
+
+.col-md-3{
+    padding: 25px 125px;
+}
+
+/* bagian tengah blog */
+.text-right{
+    text-align: right;
+}
+
+.judul{
+    font-size: 24px;
+}
+.selanjutnya{
+    color: blue;
+}
+.blogimg{
+    width: 612px;
+}
+
+/* bagian tengah mentor */
+.text-center{
+    text-align: center;
+}
+.mentorimg{
+    margin: 10px 0px;
+}
+.mentorname{
+    font-size: 24px;
+}
+.mentorquote{
+    font-size: 20px;
+}
+
+/* bagian tengah mentee */
+.menteeimg{
+    width: 200px;
+    margin: 10px 0 10px 50px;
+}
+.menteename{
+    font-size: 24px;
+}
+.menteequote{
+    font-size: 20px;
+}
+
+/* bagian tengah author */
+.authorimg{
+    width: 603px;
+}
+.authorname{
+    font-size: 20px;
+}
+.authoridentity{
+    padding: 25px 0px;
+}
+/* bagian bawah */
+.product{
+    /* padding-left: 225px; */
+    background-color:#21C1D3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 5px 0px 5px 225px;
+}
+
+.contactperson{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* padding-right: 0px;
+    padding-left: 0px; */
+    padding: 5px 0px;
+    margin-bottom: 0px;
+}
+.email{
+    color: blue;
+}

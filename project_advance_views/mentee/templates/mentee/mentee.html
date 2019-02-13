@@ -1,0 +1,23 @@
+{% extends 'home/template.html' %}
+{% load static %}
+
+{% block isi %}
+<section>
+    <div class="container-fluid">
+        <p class="text-center mentorname"><strong>Our Mentee</strong></p>
+        {% for data in mentees %}
+        <div class="row"> 
+            <div class="col-1"></div>
+            <div class="col-3">
+                <img class="menteeimg" src="{{data.images}}" alt="">
+            </div>
+            <div class="col-7 progdesc">
+                <span class="menteename">{{data.nama_lengkap}}</span><br>
+                <span class="menteequote">{{data.quotes}}</span>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Alpha Tech Academy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'mentor' %}">Mentor</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'mentee' %}">Mentee</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'author' %}">Author</a>
+                    </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <header>
+            <div class="container-fluid">
+                <div class="row description">   
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <img src="{% static 'images/alpha-logo.png'%}" alt=""><br>
+                        <span class="titledescription">Alpha Tech Academy</span>
+                        <p>Alpha Tech Academy is a tech talent incubator that gives everyone (even 
+                            non IT background) a chance to be a professional Tech Talent within 3 
+                            months. Contact Person: Email : academy@alphatech.id Mobile Phone:  
+                            0877 9609 9530
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </header>
+
+        {% block isi %}
+        {% endblock %}
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row  product">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <span>Our Product: </span>
+                        <img src="{% static 'images/logo-grey-alphapay.png'%}" alt="">
+                        <img src="{% static 'images/logo-grey-sepulsa.png'%}" alt="">
+                        <img src="{% static 'images/logo-grey-alphabill.png'%}" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row contactperson">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <span>Contact Person: Mobile Phone: 0877 9609 9530 Email : <span class="email">academy@alphatech.id</span></span>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
